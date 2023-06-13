@@ -31,7 +31,8 @@ The aim of this project is to create an asynchronous web app that uses Web API a
 npm install
 ```
 
-3. Get the API key needed to connect and access the data from the API used in this project. Go to the OpenWeather website [here](https://openweathermap.org/){:target="_blank"}, sign up using your email, and the API key will be sent to you in a confirmation email.
+3. Get the API key needed to connect and access the data from the API used in this project.<br>
+   Go to the OpenWeather website [here](https://openweathermap.org/), sign up using your email, and the API key will be sent to you in a confirmation email.
 
 4. Add a `.env` file to the root directory with your API key like `API_KEY=your-api-key` so you are able to connect to the API.
 
