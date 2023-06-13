@@ -39,8 +39,6 @@ app.get('/all', getData);
 
 function getData (req, res) {
     res.send(projectData);
-    console.log(projectData)
-
 };
 
 // GET route for API Key
@@ -55,8 +53,8 @@ app.post('/add', postData);
 
 function postData (req, res) {
     projectData = req.body;
+    console.log(projectData)
     projectData['date'] = req.body.date;
-    projectData['zip'] = req.body.zip;
     projectData['icon'] = req.body.icon;
     projectData['temp'] = req.body.temp;
     projectData['description'] = req.body.description;
