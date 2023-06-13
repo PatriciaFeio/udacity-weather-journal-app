@@ -59,6 +59,16 @@ The application will communicate with the API retrieving the temperature, a desc
 
 ## Development
 
+The following technologies were used on the project development
+
+- <a href="https://nodejs.org/en" target="_blank">Node.js</a>
+- <a href="https://expressjs.com/" target="_blank">Express</a>
+- <a href="https://www.npmjs.com/package/body-parser" target="_blank">Body-Parser</a>
+- <a href="https://www.npmjs.com/package/cors" target="_blank">Cors</a>
+- <a href="https://www.npmjs.com/package/dotenv" target="_blank">Dotenv</a>
+
+The project was depoyed in <a href="https://render.com/"  target="_blank">Render</a>
+
 
 
 [Back to top][top]
