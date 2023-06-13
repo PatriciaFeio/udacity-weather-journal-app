@@ -1,6 +1,6 @@
 /* Global Variables */
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
-const units = '&units=metric';
+const units = '&units=imperial';
 let apiKey = ''
 
 // Create a new date instance dynamically with JS
@@ -12,7 +12,7 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 fetch('/key')
 .then(res => res.text())
 .then(key => {
-    apiKey = key
+    apiKey = `${key}${units}`
 });
 
 // Submit form element
@@ -21,14 +21,13 @@ document.getElementById('input-form').addEventListener('submit', formSubmit);
 function formSubmit(e) {
     e.preventDefault();
 
-    const city = document.getElementById('cityName').value;
+    const zip = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
 
-    getData(baseUrl, city, apiKey, units)
+    getData(baseUrl, zip, apiKey, units)
     .then(function(data) {
         postData('/add', {
             date:newDate,
-            city:city,
             icon:data.weather[0].icon,
             temp:data.main.temp,
             description:data.weather[0].description,
@@ -46,20 +45,19 @@ const updateUi = async () => {
     try {
         const allData = await request.json();
         document.getElementById('date').innerHTML = allData.date;
-        document.getElementById('city').innerHTML = allData.city;
-        document.getElementById('temp').innerHTML = `${allData.temp} °C`;
+        document.getElementById('temp').innerHTML = `${allData.temp} °F`;
         document.getElementById('icon').src = `https://openweathermap.org/img/wn/${allData.icon}@2x.png`;                
         document.getElementById('description').innerHTML = allData.description;
         document.getElementById('content').innerHTML = `<p>${allData.feelings}</p>`;
         document.getElementById('hour').innerHTML = allData.hour;
-    } catch(e) {
-        console.log(e);
+    } catch(error) {
+        console.log(error);
     }
 };
 
 // Get weather data from api
-const getData = async (baseUrl, city, apiKey, units) => {
-        const response = await fetch(baseUrl + city + '&appid=' + apiKey + units);
+const getData = async (baseUrl, zip, apiKey, units) => {
+        const response = await fetch(baseUrl + zip + '&appid=' + apiKey + units);
         try {
             const data = await response.json();
             if (!response.ok) {
@@ -67,7 +65,8 @@ const getData = async (baseUrl, city, apiKey, units) => {
             }
             return data
         } catch(error) {
-            console.log(error);
+            console.log("error",error)
+            throw error;
         }
 }
 
@@ -88,7 +87,7 @@ const postData = async (url= '', data = {}) => {
             return;
         }
         return newData
-    } catch(e) {
-        console.log(e);
+    } catch(error) {
+        console.log("error",error)
     }
 };
