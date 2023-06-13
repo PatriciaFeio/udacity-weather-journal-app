@@ -23,7 +23,7 @@ The aim of this project is to create an asynchronous web app that uses Web API a
 
 ## Installation
 
-1. Clone or download this project to your machine.
+1. Clone or download this project to your machine [here](https://github.com/PatriciaFeio/udacity-weather-journal-app/tree/main).
 
 2. Install the required dependencies by running this command on the project directory:
 
