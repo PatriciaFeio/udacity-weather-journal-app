@@ -48,13 +48,12 @@ npm install
 
 6. Access the application using `http://localhost:3000/`.
 
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
-
 <br>
 
 ## Usage
 
-You can write the name of a city in the required input and how you are feeling, then click on the `Generate` button. The application will communicate with the API retrieving the temperature, a description of the weather conditions of the chosen city and the corresponding icon. You will also get the date, the hours, and the feelings you wrote.
+You can write the name of a city in the required input and how you are feeling, then click on the `Generate` button. <br>
+The application will communicate with the API retrieving the temperature, a description of the weather conditions of the chosen city and the corresponding icon. You will also get the date, the hours, and the feelings you wrote.
 
 <br>
 
