@@ -1,12 +1,12 @@
 # Weather-Journal App Project
 
-# Demo
+## Demo
 
 A demo of this project is available [here]().
 
 ![project screen capture](https://github.com/PatriciaFeio/udacity-weather-journal-app/blob/main/screen-capture.gif)
 
-## Table of contents
+# Table of contents
 
 [top]: #top
 
@@ -15,13 +15,13 @@ A demo of this project is available [here]().
 - [Usage](#usage)
 - [Development](#development)
 
-## overview
+## Overview
 
 This is the third mandatory project for the **Front End Developer Nanodegree Program** sponsored by the **Bertelsmann Next Generation Tech Booster Scholarship Program**.
 
 The aim of this project is to create an asynchronous web app that uses Web API and user data to dynamically update the UI.
 
-## installation
+## Installation
 
 1. Clone or download this project to your machine.
 
@@ -41,11 +41,11 @@ npm install
 
 This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
 
-## usage
+## Usage
 
 You can write the name of a city in the required input and how you are feeling, then click on the `Generate` button. The application will communicate with the API retrieving the temperature, a description of the weather conditions of the chosen city and the corresponding icon. You will also get the date, the hours, and the feelings you wrote.
 
-## development
+## Development
 
 
 
