@@ -52,8 +52,8 @@ npm install
 
 ## Usage
 
-You can write the name of a city in the required input and how you are feeling, then click on the `Generate` button. <br>
-The application will communicate with the API retrieving the temperature, a description of the weather conditions of the chosen city and the corresponding icon. You will also get the date, the hours, and the feelings you wrote.
+You can write the zip code of a US city in the required input and how you are feeling, then click on the `Generate` button. <br>
+The application will communicate with the API retrieving the temperature, a description of the weather conditions of the chosen zip code and the corresponding icon. You will also get the date, the hours, and the feelings you wrote.
 
 <br>
 
@@ -69,7 +69,4 @@ The following technologies were used on the project development
 
 The project was depoyed in <a href="https://render.com/"  target="_blank">Render</a>
 
-
-
 [Back to top][top]
-
