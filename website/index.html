@@ -16,19 +16,19 @@
       <header class="headline-container">
         <h1 class="headline">Weather Journal App</h1>
         <h2 class="subtitle">
-          Generate a card where you can check the temperature of a city of your
-          choice.
+          Generate a card where you can check the temperature of a US state
+          inserting a zip code in the corresponding input field.
           <br />
           Also add how you are feeling today.
         </h2>
       </header>
       <section class="form-container">
         <form id="input-form" class="form">
-          <label for="cityName">City</label>
+          <label for="zip">Zip code</label>
           <input
             type="text"
-            id="cityName"
-            placeholder="Enter city name here"
+            id="zip"
+            placeholder="Enter zip code here"
             required
           />
           <label for="feelings">How are you feeling today?</label>
@@ -46,7 +46,7 @@
         <div class="info-card">
           <div id="date"></div>
           <div class="holder-wrapper">
-            <div id="city" class="cityName"></div>
+            <div id="cityName"></div>
             <div id="temp"></div>
           </div>
           <figure class="holder-wrapper">
