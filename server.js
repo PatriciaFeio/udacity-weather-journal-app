@@ -36,13 +36,6 @@ function getData (req, res) {
     res.send(projectData);
 };
 
-// GET route for API Key
-app.get('/key', getKey);
-
-function getKey(req, res) {
-    res.send(key);
-}
-
 // POST route
 app.post('/add', postData);
 
