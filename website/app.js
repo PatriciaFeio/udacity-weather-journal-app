@@ -1,22 +1,14 @@
 /* Global Variables */
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
-const units = '&units=imperial';
-let apiKey = ''
+const apiKey = 'f78e3b9790ac303b3d99af99a6e85df9&units=imperial'
 
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newHour = d.toLocaleString([], {hour: '2-digit', minute:'2-digit', second: '2-digit'});
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
-// Get APIkey
-fetch('/key')
-.then(res => res.text())
-.then(key => {
-    apiKey = `${key}${units}`
-});
-
 // Submit form element
-document.getElementById('input-form').addEventListener('submit', formSubmit);
+document.getElementById('generate').addEventListener('click', formSubmit);
 
 function formSubmit(e) {
     e.preventDefault();
@@ -24,7 +16,7 @@ function formSubmit(e) {
     const zip = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
 
-    getData(baseUrl, zip, apiKey, units)
+    getData(baseUrl, zip, apiKey)
     .then(function(data) {
         postData('/add', {
             date:newDate,
@@ -51,13 +43,14 @@ const updateUi = async () => {
         document.getElementById('content').innerHTML = `<p>${allData.feelings}</p>`;
         document.getElementById('hour').innerHTML = allData.hour;
     } catch(error) {
-        console.log(error);
+        console.log("error", error);
+        // appropriately handle the error
     }
 };
 
 // Get weather data from api
-const getData = async (baseUrl, zip, apiKey, units) => {
-        const response = await fetch(baseUrl + zip + '&appid=' + apiKey + units);
+const getData = async (baseUrl, zip, apiKey) => {
+        const response = await fetch(baseUrl + zip + '&appid=' + apiKey);
         try {
             const data = await response.json();
             if (!response.ok) {
