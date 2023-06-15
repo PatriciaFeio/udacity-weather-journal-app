@@ -39,14 +39,9 @@ The aim of this project is to create an asynchronous web app that uses Web API a
 npm install
 ```
 
-3. Get the API key needed to connect and access the data from the API used in this project.<br>
-   Go to the OpenWeather website [here](https://openweathermap.org/), sign up using your email, and the API key will be sent to you in a confirmation email.
+3. Start the server by running `npm run start`.
 
-4. Add a `.env` file to the root directory with your API key like `API_KEY=your-api-key` so you are able to connect to the API.
-
-5. Start the server by running `npm run start`.
-
-6. Access the application using `http://localhost:3000/`.
+4. Access the application using `http://localhost:3000/`.
 
 <br>
 
@@ -65,7 +60,6 @@ The following technologies were used on the project development
 - <a href="https://expressjs.com/" target="_blank">Express</a>
 - <a href="https://www.npmjs.com/package/body-parser" target="_blank">Body-Parser</a>
 - <a href="https://www.npmjs.com/package/cors" target="_blank">Cors</a>
-- <a href="https://www.npmjs.com/package/dotenv" target="_blank">Dotenv</a>
 
 The project was depoyed in <a href="https://render.com/"  target="_blank">Render</a>
 
