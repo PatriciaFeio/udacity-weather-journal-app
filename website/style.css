@@ -47,21 +47,17 @@ body {
   border-width: 0 15px 15px 15px;
 }
 
-.holder-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.holder-wrapper:nth-child(1n) {
-  gap: 18px;
-}
-
 .info-card {
   height: 441px;
   padding: 25px 15px;
   display: flex;
-  flex-basis: 500px;
+  flex-basis: 400px;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon-wrapper {
+  display: flex;
   justify-content: space-around;
 }
 
