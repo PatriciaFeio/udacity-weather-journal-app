@@ -1,9 +1,6 @@
 // Empty JS object to act as endpoint for all routes
 projectData = {};
 
-// dotenv to use custom environment variables
-require('dotenv').config();
-
 // Express to run server and routes
 const express = require('express');
 
@@ -24,10 +21,8 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-const key = process.env.API_KEY
-
 // Spin up the server
-const port = process.env.PORT || 3000;
+const port = 3000;
 const server = app.listen(port, listening);
 
 function listening() {
